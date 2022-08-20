@@ -1,2 +1,2 @@
-[35m@word-assistant/server:lint[0m: cache hit, replaying output [2m9859d827debf1d56[0m
-[35m@word-assistant/server:lint: [0m$ eslint "src/**/*.ts" --fix
+[32m@word-assistant/server:lint[0m: cache hit, replaying output [2me49744f7113bf6c8[0m
+[32m@word-assistant/server:lint: [0m$ eslint "src/**/*.ts" --fix
