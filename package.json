@@ -9,9 +9,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts, js, tsx, jsx}": [
-      "yarn lint"
-    ]
+    "./packages/*": "yarn lint"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

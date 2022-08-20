@@ -19,11 +19,7 @@
     "outDir": "dist",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"],
-      "utils/*": ["./utils/*"],
-      "drivers/*": ["./drivers/*"],
-      "services/*": ["./services/*"],
-      "errors/*": ["./errors/*"],
+      "@/*": ["./*"]
     },
     "skipLibCheck": true,
     "strict": false,

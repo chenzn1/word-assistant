@@ -5,5 +5,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["typescript", "javascript", "typescriptreact", "javascriptreact"]
+  "eslint.validate": [
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "cSpell.words": [
+    "umzug"
+  ]
 }

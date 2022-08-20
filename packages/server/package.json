@@ -4,16 +4,29 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.ts --exec ts-node",
+    "dev": "nodemon src/index.ts --exec \"ts-node -r tsconfig-paths/register\"",
     "lint": "eslint \"src/**/*.ts\" --fix"
   },
   "dependencies": {
+    "dotenv": "^16.0.1",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.4",
-    "koa-router": "^12.0.0"
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^12.0.0",
+    "mysql2": "^2.3.3",
+    "pretty-error": "^4.0.0",
+    "randomstring": "^1.2.2",
+    "sequelize": "^6.21.4",
+    "umzug": "^3.2.1",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-router": "^7.4.4",
+    "@types/randomstring": "^1.1.8",
+    "@types/umzug": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",
@@ -23,6 +36,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "lint-staged": "^13.0.3",
     "nodemon": "^2.0.19",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "tsconfig-paths": "^4.1.0"
   }
 }
