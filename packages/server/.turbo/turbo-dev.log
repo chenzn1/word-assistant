@@ -1,0 +1,7 @@
+[35m@word-assistant/server:dev[0m: cache hit, replaying output [2m87e269e219391e66[0m
+[35m@word-assistant/server:dev: [0m$ nodemon src/index.ts --exec ts-node
+[35m@word-assistant/server:dev: [0m[33m[nodemon] 2.0.19[39m
+[35m@word-assistant/server:dev: [0m[33m[nodemon] to restart at any time, enter `rs`[39m
+[35m@word-assistant/server:dev: [0m[33m[nodemon] watching path(s): *.*[39m
+[35m@word-assistant/server:dev: [0m[33m[nodemon] watching extensions: ts,json[39m
+[35m@word-assistant/server:dev: [0m[32m[nodemon] starting `ts-node src/index.ts`[39m

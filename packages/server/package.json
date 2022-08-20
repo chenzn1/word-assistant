@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_HODGEPODGE_ENV=development nodemon src/index.ts --exec ts-node",
+    "dev": "nodemon src/index.ts --exec ts-node",
     "lint": "eslint \"src/**/*.ts\" --fix"
   },
   "dependencies": {
