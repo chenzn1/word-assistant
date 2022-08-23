@@ -1,12 +1,27 @@
 import Koa from 'koa'
-import Router from 'koa-router'
 import bodyParser from 'koa-bodyparser'
-import { userController } from './controllers'
-import { generalErrorHandler } from './middlewares'
+import { generalErrorHandler } from './middleware'
 import { ResourceNotFoundError } from './errors'
+import { router } from './router'
 
 export function createApp() {
   const app = new Koa()
+
+  app.use((ctx, next) => {
+    ctx.set('Access-Control-Allow-Origin', '*')
+    ctx.set('Access-Control-Allow-Credentials', 'true')
+    ctx.set(
+      'Access-Control-Allow-Headers',
+      'Content-Type, Content-Length, Authorization, Accept, X-Requested-With'
+    )
+    ctx.set('Access-Control-Allow-Methods', 'PUT, POST, PATCH, GET, DELETE, OPTIONS')
+    if (ctx.request.method === 'OPTIONS') {
+      ctx.status = 200
+    } else {
+      return next()
+    }
+  })
+
   app.use(bodyParser())
 
   app.use(async (ctx, next) => {
@@ -16,9 +31,6 @@ export function createApp() {
       generalErrorHandler(err, ctx)
     }
   })
-
-  const router = new Router()
-  router.post('/users', userController.register)
 
   app.use(router.routes()).use(router.allowedMethods())
 
